@@ -2,8 +2,56 @@
 <html>
 <head>
 	<title>Assignment Planner</title>
+	<style type="text/css">
+		a:link, a:visited {
+  text-decoration: none;
+  background-color: green;
+  border: 1px solid blue;
+  color: black;
+  display: inline;
+ 
+  text-align: center;
+  margin-bottom: 1px;
+}
+a:hover, a:active {
+  background-color: red;
+  color: purple;
+}
+button {
+color:blue;
+}
+</style>
+
 </head>
 <body>
- <iframe src="https://calendar.google.com/calendar/embed?src=2mtgam7p4i5ucckhm3kh8igfo6pkhp8o%40import.calendar.google.com&ctz=Europe%2FAmsterdam" style="border: 0" width="800" height="600" frameborder="0" scrolling="no"></iframe>
+	<header>
+  <ul>
+    <li><a>What is the 'webcal adress' and how do you find your own?</a></li>
+  </ul>
+</header>
+  <span><label> <h4>Choose which class you are in (Sorry about the dutch and english events they do not apply to everybody in the class): </h4>
+  	<select id="lang" >
+            <option value="1a">MYP 1a</option>
+           
+    </select>
+  </label></span> <br>
+
+  <button id="button" type="button"><a id="buttontext"><h3> &nbsp&nbsp Done &nbsp&nbsp</h3></a></button>
+ &nbsp&nbsp
+  <script>
+
+  var button = document.getElementById("button");
+
+  var onButtonClick = function() {
+  	var buttontext = document.getElementById("buttontext");
+    var lang = document.getElementById("lang").value;
+    if (lang === "1a") {
+    	buttontext.href = "myp1acalender.html"
+    }
+    	buttontext.innerHTML = "Click again to open Calender"
+    }
+    
+  button.addEventListener("click", onButtonClick)
+</script>
 </body>
 </html>
